@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Redirect</title>
+    <script>
+        function detectOS() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = 'https://portal.testapp.io/apps/install/nv3MRMDqd31by';
+            } else if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+                window.location.href = 'https://testflight.apple.com/join/JZfJSvbz';
+            } else {
+                // If neither Android nor iOS, you can handle it accordingly
+                alert('This webpage is designed for iOS and Android devices.');
+            }
+        }
+    </script>
+</head>
+
+<body onload="detectOS()">
+    <h1>Redirecting...</h1>
+    <!-- You can customize the loading message or provide a button to manually trigger the detection -->
+
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
+</body>
+
+</html>
